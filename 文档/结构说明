@@ -1,0 +1,15 @@
+注册中心：Spring Cloud Eureka实现
+配置中心：Spring Cloud Config实现，支持放到本地或Git上
+用户中心：RBAC实现，包括user、user-role、role、role-permission、permission
+认证中心：Spring Cloud Oauth2实现，授权后提供access_token
+网关：Spring Cloud Zuul实现，路由分发请求到各个微服务
+管理后台：菜单、ip黑名单维护，邮件发送，后台管理前端（前端支持分离部署）
+日志中心：各微服务aop拦截并发送日志，日志中心基于rabbitmq消息处理日志
+文件中心：文件上传，暂时实现了本地存储，可自行扩展第三方存储
+监控中心：Spring Boot Admin实现
+
+链路追踪：zipkin
+
+
+
+流程：请求--Zuul（拦截管理后台维护的黑名单或转发）--微服务

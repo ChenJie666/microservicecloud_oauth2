@@ -1,0 +1,27 @@
+server:
+  port: 9527
+
+spring:
+  application:
+    name: microservicecloud-zuul-gateway
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka1.com:7001/eureka/,http://eureka2.com:7002/eureka/,http://eureka3.com:7003/eureka/
+  instance:
+    instance-id: gateway-9527.com
+    prefer-ip-address: true
+
+zuul:
+  prefix: /hxr #访问服务时必须要加的前缀
+  ignored-services: microservicecloud-dept  #隐藏真实服务名，外界无法访问，只能通过zuul路由访问
+  routes:
+    mydept.serviceId: microservicecloud-dept  #映射的服务名
+    mydept.path: /mydept/** #服务名映射到的服务地址
+
+info:
+  app.name: hxr-microcloud
+  company.name: www.hxr.com
+  build.artifactId: ${project.artifactId}
+  build.version: ${project.version}

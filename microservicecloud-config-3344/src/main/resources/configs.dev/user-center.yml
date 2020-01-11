@@ -1,0 +1,17 @@
+logging:
+  level:
+    root: info  #root级别的日志级别是info
+    com.hxr.springcloud: debug  #自定义包下的日志级别是debug
+  file: logs/${spring.application.name}.log #自定义日志文件输出
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://116.62.148.11:3307/microservice-oauth2?useUnicode=true&characterEncoding=utf-8&allowMultiQueries=true&useSSL=false
+    username: root
+    password: abc123
+  rabbitmq:
+    host: 116.62.148.11
+    port: 5672
+    username:
+    password:
+    virtual-host:

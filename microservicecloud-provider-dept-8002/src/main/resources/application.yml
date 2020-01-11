@@ -1,0 +1,37 @@
+server:
+  port: 8002
+
+mybatis:
+  config-location: classpath:mybatis/mybatis.cfg.xml  #配置文件路径
+  type-aliases-package: com.hxr.springcloud.entities
+  mapper-locations:
+  - classpath:mybatis/mapper/**/*.xml #mapper映射文件
+
+spring:
+  application:
+    name: microservicecloud-dept  # 对外暴露的微服务名字
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource  #当前数据库操作类型
+    driver-class-name:  org.gjt.mm.mysql.Driver  # mysql驱动包
+    url: jdbc:mysql://hadoop101:3306/cloudDB02  #数据库URL
+    username: root
+    password: hxr
+    dbcp2:
+      min-idle: 5 #数据库连接池的最小维持连接数
+      initial-size: 5 #初始化连接数
+      max-total: 5 #最大连接数
+      max-wait-millis: 200 #等待连接获取的最大超时时间
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka1.com:7001/eureka,http://eureka2.com:7002/eureka,http://eureka3.com:7003/eureka
+  instance:
+    instance-id: microservicecloud-dept8002 #访问路径名
+    prefer-ip-address: true #是否显示ip名
+
+info:
+  app.name: hxr-microservicecloud
+  company.name: www.hxr.com
+  build.artifactId: ${project.artifactId}
+  build.version: ${project.version}

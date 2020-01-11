@@ -1,0 +1,3 @@
+spring:
+  application:
+    name: microservicecloud-dept  # 对外暴露的微服务名字
