@@ -6,15 +6,15 @@ spring:
     name: microservicecloud-config-eureka #在注册中心上的微服务名
   security:
     user: #所有访问注册中心的请求都需要输入密码；其他服务向注册中心注册时的url： http://用户名:密码@eureka1.com:7001/eureka
-      name:
-      password:
+      name: root
+      password: abc123
 
 eureka:
   client: #客户端注册进eureka服务列表中
     serviceUrl:
-      defaultZone: http://root:abc123@eureka1.com:${server.port}/eureka/ #TODO 设置与Eureka Server交互的地址查询服务和注册服务的地址！改动一下试试？？后续改成集群模式
+      defaultZone: http://root:abc123@eureka1.com:${server.port}/eureka #TODO 设置与Eureka Server交互的地址查询服务和注册服务的地址！改动一下试试？？后续改成集群模式
     register-with-eureka: true #true表示在eureka管理中注册自己
-    fetch-registry: false #表示自己就是注册中心，只需要维护实例，不需要去注册中心获取其他服务的地址
+    fetch-register: false #表示自己就是注册中心，只需要维护实例，不需要去注册中心获取其他服务的地址
     registry-fetch-interval-seconds: 5 #表示eureka client间隔多久去拉取服务注册信息
   instance:
     lease-expiration-duration-in-seconds: 15 #最短过期时间，超时未接受到心跳将从注册中心中移除该实例
@@ -24,3 +24,7 @@ eureka:
   server:
     enable-self-preservation: false #Eureka服务的自我保护机制（短时间内丢失过多的微服务后会开启自我保护机制，不再注销任何微服务；网络故障恢复后会退出自我保护机制）
     eviction-interval-timer-in-ms: 3000 #清理无效节点的时间间隔，默认60s
+
+management:
+  security:
+    enable: false #TODO ？？

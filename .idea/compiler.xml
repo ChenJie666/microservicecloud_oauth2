@@ -12,14 +12,7 @@
         <module name="microservicecloud-consumer-dept-80" />
         <module name="microservicecloud-consumer-dept-feign" />
         <module name="microservicecloud-consumer-hystrix-dashboard" />
-        <module name="microservicecloud-eureka-7001" />
-        <module name="microservicecloud-eureka-7002" />
-        <module name="microservicecloud-eureka-7003" />
         <module name="microservicecloud-eureka-config-7001" />
-        <module name="microservicecloud-provider-dept-8001" />
-        <module name="microservicecloud-provider-dept-8002" />
-        <module name="microservicecloud-provider-dept-8004" />
-        <module name="microservicecloud-provider-dept-8005" />
         <module name="microservicecloud-provider-dept-hystrix-8001" />
         <module name="microservicecloud-provider-dept-hystrix-8002" />
         <module name="microservicecloud-provider-dept-hystrix-8004" />

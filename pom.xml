@@ -9,13 +9,7 @@
     <version>1.0-SNAPSHOT</version>
     <modules>
         <module>microservicecloud-api</module>
-        <module>microservicecloud-provider-dept-8001</module>
         <module>microservicecloud-consumer-dept-80</module>
-        <module>microservicecloud-eureka-7001</module>
-        <module>microservicecloud-eureka-7002</module>
-        <module>microservicecloud-eureka-7003</module>
-        <module>microservicecloud-provider-dept-8002</module>
-        <module>microservicecloud-provider-dept-8004</module>
         <module>microservicecloud-consumer-dept-feign</module>
         <module>microservicecloud-provider-dept-hystrix-8001</module>
         <module>microservicecloud-provider-dept-hystrix-8002</module>
@@ -26,7 +20,6 @@
         <module>microservicecloud-config-client-3355</module>
         <module>microservicecloudprovider-dept-config-8001</module>
         <module>microservicecloud-eureka-config-7001</module>
-        <module>microservicecloud-provider-dept-8005</module>
     </modules>
     <packaging>pom</packaging> <!--pom是最简单的打包方式，不打包代码，只是为了聚合工程和传递依赖-->
 

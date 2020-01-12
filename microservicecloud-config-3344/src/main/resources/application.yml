@@ -22,4 +22,28 @@ spring:
 #http://config-3344.com:3344/application-dev.yml
 #http://config-3344.com:3344/master/application-dev.yml
 #http://config-3344.com:3344/application/dev/master
-#进行访问
+#进行配置文件的查看
+
+eureka:
+  client:
+    service-url:
+      default-zone: http://root:abc123@eureka1.com/eureka/  #注册中心的地址（需要注册中心的账号密码）
+    registry-fetch-interval-seconds: 5  #Eureka Client隔多久从注册中心拉取注册服务的信息
+  instance:
+    lease-expiration-duration-in-seconds: 15 #服务过期时间
+    lease-renewal-interval-in-seconds: 5 #发送心跳时间
+    prefer-ip-address: true #域名显示为ip而非主机名
+
+management:  #TODO ???
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: always
+
+logging:  #TODO ???
+  level:
+    root: info
+  file: logs/${spring.application.name}.log
