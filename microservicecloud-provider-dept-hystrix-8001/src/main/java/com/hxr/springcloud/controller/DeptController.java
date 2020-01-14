@@ -41,6 +41,7 @@ public class DeptController {
 
     @RequestMapping(value = "/dept/list", method = RequestMethod.GET)
     public List<Dept> list() {
+        System.out.println(deptService.list());
         return deptService.list();
     }
 

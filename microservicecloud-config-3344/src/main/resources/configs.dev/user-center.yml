@@ -12,6 +12,6 @@ spring:
   rabbitmq:
     host: 116.62.148.11
     port: 5672
-    username:
-    password:
-    virtual-host:
+    username: user
+    password: user
+    virtual-host: /vhost_mmr

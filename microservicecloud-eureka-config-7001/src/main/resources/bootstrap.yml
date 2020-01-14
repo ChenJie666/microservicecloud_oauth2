@@ -1,8 +1,0 @@
-#spring:
-#  cloud:
-#    config:
-#      name: microservicecloud-config-eureka #GitHub上访问的文件名，注意不加.yml
-#      profile: dev
-#      label: master
-#      uri: http://config-3344.com:3344  #通过SpringCloudConfig微服务得到GitHub上的文件信息
-#
