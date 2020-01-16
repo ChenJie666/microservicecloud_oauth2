@@ -28,7 +28,7 @@ spring:
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://eureka1.com:7001/eureka/  #注册中心的地址（需要注册中心的账号密码）  TODO 注意使用驼峰命名法，否则会发生未知错误
+      defaultZone: http://root:abc123@eureka1.com:7001/eureka/  #注册中心的地址（需要注册中心的账号密码）  TODO 注意使用驼峰命名法，否则会发生未知错误
     registry-fetch-interval-seconds: 5  #Eureka Client隔多久从注册中心拉取注册服务的信息
   instance:
     lease-expiration-duration-in-seconds: 15 #服务过期时间
@@ -49,3 +49,9 @@ logging:  #TODO ???
   level:
     root: info
   file: logs/${spring.application.name}.log
+
+info:
+  app.name: microservicecloud
+  company.name: www.hxr.com
+  build.artifactId: ${project.artifactId}
+  build.vesion: ${project.version}

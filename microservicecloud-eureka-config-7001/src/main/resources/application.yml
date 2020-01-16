@@ -4,10 +4,6 @@ server:
 spring:
   application:
     name: microservicecloud-config-eureka #在注册中心上的微服务名
-  security:
-    user: #所有访问注册中心的请求都需要输入密码；其他服务向注册中心注册时的url： http://用户名:密码@eureka1.com:7001/eureka
-#      name: root
-#      password: abc123
 
 eureka:
   client: #客户端注册进eureka服务列表中
