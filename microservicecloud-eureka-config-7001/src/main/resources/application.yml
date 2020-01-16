@@ -8,7 +8,7 @@ spring:
 eureka:
   client: #客户端注册进eureka服务列表中
     serviceUrl:
-      defaultZone: http://eureka1.com:7001/eureka/ #TODO 设置与Eureka Server交互的地址查询服务和注册服务的地址！改动一下试试？？后续改成集群模式
+      defaultZone: http://root:abc123@eureka1.com:7001/eureka/ #TODO 设置与Eureka Server交互的地址查询服务和注册服务的地址！改动一下试试？？后续改成集群模式
     register-with-eureka: false #true表示在eureka管理中注册自己
     fetch-registry: false #表示自己就是注册中心，只需要维护实例，不需要去注册中心获取其他服务的地址
     registry-fetch-interval-seconds: 5 #表示eureka client间隔多久去拉取服务注册信息
