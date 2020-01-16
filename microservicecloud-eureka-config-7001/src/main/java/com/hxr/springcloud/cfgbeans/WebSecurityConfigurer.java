@@ -18,12 +18,19 @@ public class WebSecurityConfigurer extends WebSecurityConfigurerAdapter {
      */
     @Override
     public void configure(HttpSecurity http) throws Exception {
-        http.csrf().disable().httpBasic();  //TODO csrf是跨站请求伪造
+        http.csrf().disable();  //TODO csrf是跨站请求伪造,关闭csrf保护
         http.authorizeRequests()
-                .antMatchers("/")
-                .hasRole("eureka_admin")
+                .antMatchers("/eureka").hasRole("eureka_admin")
+                .antMatchers("/").hasRole("view")
+//                .antMatchers().access("hasRole('view') and hasRole('visit')") //TODO 拥有所有的角色才可访问
+                .antMatchers().hasAnyRole("view","visit")   //TODO 拥有其中一个角色即可访问
+                .anyRequest().authenticated()   //TODO 所有的请求都需要进行验证（如果没有写，则只有列出的请求路径需要验证）
+//                .and()  //TODO 返回一个HttpSecurity对象
+//                .formLogin()   //TODO formLogin(列表形式)和httpBasic(弹窗形式)是两种登陆形式
+//                .loginPage("/loginmy").permitAll()   //TODO 重定向到登录页面，并开放访问该页面的权限(否则重定向到默认页面)
                 .and()
-                .formLogin();
+                .httpBasic();   //TODO httpBasic用于Web Service API登录
+
     }
 
     @Override
@@ -32,6 +39,10 @@ public class WebSecurityConfigurer extends WebSecurityConfigurerAdapter {
                 .withUser("root")
                 .password("abc123")
                 .roles("eureka_admin");
+        auth.inMemoryAuthentication()
+                .withUser("root")
+                .password("abc321")
+                .roles("view");
     }
 
 }
