@@ -2,7 +2,7 @@
 #  cloud:
 #    config:
 #      name: microservicecloudprovider-dept-config-8001 #需要读取的GitHub上的文件名，注意省略.yml
-#      profile: dev #本次访问的配置项
+#      profile: configs1.configs.dev #本次访问的配置项
 #      label: master
 #      uri: http://config-3344.com:3344  #本微服务启动后先去找3344，通过SpringCloudConfig获取GitHub的服务地址
 
@@ -16,18 +16,24 @@ spring:
     config:
       discovery:
         enabled: true
-        serviceId: microservicecloud-config
-      name: microservicecloudprovider-dept-config-8001
-      profile: dev
+        serviceId: MICROSERVICECLOUD-CONFIG #从注册中心查找的微服务名
+      name: microservicecloudprovider-dept-config-8001  #从配置中心查找的配置文件的文件名
+      profile: dev  #配置中心的变量
       fail-fast: true #快速失败，当多个线程对同一个集合的内容进行操作时，就可能会产生fail-fast事件
 
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://eureka1.com:7001/eureka/
-    registry-fetch-interval-seconds: 5
+      defaultZone: http://root:abc123@eureka1.com:7001/eureka/
+    registry-fetch-interval-seconds: 5  #客户端从注册中心获取服务信息的时间间隔
   instance:
-    lease-expiration-duration-in-seconds: 15
-    lease-renewal-interval-in-seconds: 5
-    prefer-ip-address: true
-    instance-id: ${spring.application.name}:${server.port}
+    lease-expiration-duration-in-seconds: 15  #服务过期时间
+    lease-renewal-interval-in-seconds: 5  #心跳发送间隔（小于过期时间）
+    prefer-ip-address: true #访问路径显示实际ip
+    instance-id: ${spring.application.name}:${server.port}  #实例名称
+
+info:
+  app.name: microservicecloud
+  company.name: www.cj.com
+  build.artifactId: ${project.artifactId}
+  build.version: ${project.version}

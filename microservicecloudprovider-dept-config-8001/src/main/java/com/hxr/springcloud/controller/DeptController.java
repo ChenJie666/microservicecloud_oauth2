@@ -19,7 +19,7 @@ public class DeptController {
     private DeptService deptService;
 
     @RequestMapping(value = "/dept/add")
-    public boolean add(@RequestBody Dept dept) {
+    public boolean add(/*@RequestBody*/ Dept dept) {
         return deptService.add(dept);
     }
 
