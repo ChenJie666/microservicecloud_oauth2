@@ -17,8 +17,9 @@
         <module>microservicecloud-consumer-hystrix-dashboard</module>
         <module>microservicecloud-zuul-gateway-9527</module>
         <module>microservicecloud-config-3344</module>
-        <module>microservicecloudprovider-dept-config-8001</module>
+        <module>microservicecloud-provider-dept-config-8001</module>
         <module>microservicecloud-eureka-config-7001</module>
+        <module>microservicecloud-user-center-4001</module>
     </modules>
     <packaging>pom</packaging> <!--pom是最简单的打包方式，不打包代码，只是为了聚合工程和传递依赖-->
 

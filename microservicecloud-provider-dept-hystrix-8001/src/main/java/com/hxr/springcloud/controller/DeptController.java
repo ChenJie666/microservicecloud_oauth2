@@ -6,6 +6,7 @@ import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.client.ServiceInstance;
 import org.springframework.cloud.client.discovery.DiscoveryClient;
+import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -40,6 +41,7 @@ public class DeptController {
 
 
     @RequestMapping(value = "/dept/list", method = RequestMethod.GET)
+//    @ResponseStatus(code = HttpStatus.BAD_REQUEST,reason = "just a kidding!")
     public List<Dept> list() {
         System.out.println(deptService.list());
         return deptService.list();

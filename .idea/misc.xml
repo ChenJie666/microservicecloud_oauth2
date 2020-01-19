@@ -5,6 +5,8 @@
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/user-center/pom.xml" />
+        <option value="$PROJECT_DIR$/microservicecloud-user-center-4001/pom.xml" />
+        <option value="$PROJECT_DIR$/microservicecloud-provider-dept-config-8001/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">

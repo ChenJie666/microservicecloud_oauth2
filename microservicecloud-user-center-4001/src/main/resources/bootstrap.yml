@@ -1,0 +1,43 @@
+server:
+  port: 4001
+
+spring:
+  application:
+    name: microservicecloud-user-center
+  cloud:
+    config:
+      discovery:
+        enabled: true
+        service-id: MICROSERVICECLOUD-CONFIG
+      name: microservicecloud-user-center-4001
+      profile: dev
+      fail-fast: true
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://root:abc123@eureka1.com:7001/eureka/
+    registry-fetch-interval-seconds: 5  #客户端拉取服务端信息的时间间隔
+  instance:
+    lease-expiration-duration-in-seconds: 15  #服务过期时间
+    lease-renewal-interval-in-seconds: 5  #发送心跳间隔
+    prefer-ip-address: true #实例的域名显示为ip，而非主机名
+    instance-id: ${spring.application.name}:${server.port} #实例名称
+
+
+management: #TODO ？？？？？？
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+
+#方式一：
+# 启用端点 env
+#management.endpoint.env.enabled=true
+# 暴露端点 env 配置多个,隔开
+#management.endpoints.web.exposure.include=env
+
+#方式二：（方式1中的暴露方式需要一个一个去开启需要暴露的端点，方式2直接开启和暴露所有端点）
+#management.endpoints.web.exposure.include=*
+#注意在使用Http访问端点时，需要加上默认/actuator 前缀
