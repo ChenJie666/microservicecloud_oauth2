@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hxr.user.dao.AppUserDao">
+
+    <sql id="where">
+        <where>
+            <if test="username != null nad username != ''">
+                <bind name="_username" value="'%' + username + '%'"/>
+                and u.username like #{_username}
+            </if>
+            <if test="nickname != null and nickname != ''">
+                <bind name="_nickname" value="'%' + nickname + '%'"/>
+                and u.nickname like #{_nickname}
+            </if>
+            <if test="enabled != null and enabled != ''">
+                and t.enabled = #{enabled}
+            </if>
+            <if test="type != null and type != ''">
+            and t.type = #{type}
+            </if>
+        </where>
+    </sql>
+
+    <!-- 获取所有满足条件的用户数 -->
+    <select id="count" resultType="int">
+        select count(*) from app_user as u
+        <include refid="where" />  <!-- 获取对应id的sql中的逻辑语句 -->
+    </select>
+
+    <!-- 查询所有满足条件的用户，按用户id进行降序排序，并进行分页 -->
+    <select id="findData" resultType="AppUser">
+        select * from app_user as u
+        <include refid="where"/>
+        order by u.id desc
+        limit #{start},#{length}
+    </select>
+
+</mapper>

@@ -15,8 +15,6 @@
       <module fileurl="file://$PROJECT_DIR$/microservicecloud-provider-dept-hystrix-8004/microservicecloud-provider-dept-hystrix-8004.iml" filepath="$PROJECT_DIR$/microservicecloud-provider-dept-hystrix-8004/microservicecloud-provider-dept-hystrix-8004.iml" />
       <module fileurl="file://$PROJECT_DIR$/microservicecloud-user-center-4001/microservicecloud-user-center-4001.iml" filepath="$PROJECT_DIR$/microservicecloud-user-center-4001/microservicecloud-user-center-4001.iml" />
       <module fileurl="file://$PROJECT_DIR$/microservicecloud-zuul-gateway-9527/microservicecloud-zuul-gateway-9527.iml" filepath="$PROJECT_DIR$/microservicecloud-zuul-gateway-9527/microservicecloud-zuul-gateway-9527.iml" />
-      <module fileurl="file://$PROJECT_DIR$/microservicecloudprovider-dept-config-8001/microservicecloudprovider-dept-config-8001.iml" filepath="$PROJECT_DIR$/microservicecloudprovider-dept-config-8001/microservicecloudprovider-dept-config-8001.iml" />
-      <module fileurl="file://$PROJECT_DIR$/user-center/microservicecloudprovider-user-center.iml" filepath="$PROJECT_DIR$/user-center/microservicecloudprovider-user-center.iml" />
     </modules>
   </component>
 </project>

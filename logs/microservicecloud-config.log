@@ -1,105 +1,83 @@
-2020-01-19 00:00:29.785  INFO 18452 --- [http-nio-3344-exec-1] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: classpath:/configs/dev/microservicecloudprovider-dept-config-8001.yml
-2020-01-19 00:00:38.822  INFO 18452 --- [http-nio-3344-exec-4] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: classpath:/configs/dev/microservicecloudprovider-dept-config-8001.yml
-2020-01-19 00:02:01.019  INFO 4768 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'configurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$8dbb654a] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2020-01-19 00:02:01.818  INFO 4768 --- [main] c.h.s.Config_3344_StartSpringCloudApp    : The following profiles are active: native
-2020-01-19 00:02:02.635  WARN 4768 --- [main] o.s.boot.actuate.endpoint.EndpointId     : Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
-2020-01-19 00:02:02.854  INFO 4768 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=eab34a48-07d5-392c-af96-fe2f61246ca1
-2020-01-19 00:02:02.953  INFO 4768 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$8dbb654a] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2020-01-19 00:02:03.226  INFO 4768 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 3344 (http)
-2020-01-19 00:02:03.258  INFO 4768 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2020-01-19 00:02:03.258  INFO 4768 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.16]
-2020-01-19 00:02:03.258  INFO 4768 --- [main] o.a.catalina.core.AprLifecycleListener   : An older version [1.2.14] of the APR based Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [1.2.21]
-2020-01-19 00:02:03.258  INFO 4768 --- [main] o.a.catalina.core.AprLifecycleListener   : Loaded APR based Apache Tomcat Native library [1.2.14] using APR version [1.6.2].
-2020-01-19 00:02:03.258  INFO 4768 --- [main] o.a.catalina.core.AprLifecycleListener   : APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
-2020-01-19 00:02:03.258  INFO 4768 --- [main] o.a.catalina.core.AprLifecycleListener   : APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
-2020-01-19 00:02:04.323  INFO 4768 --- [main] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 1.0.2l  25 May 2017]
-2020-01-19 00:02:04.480  INFO 4768 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2020-01-19 00:02:04.480  INFO 4768 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2646 ms
-2020-01-19 00:02:04.729  WARN 4768 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
-2020-01-19 00:02:04.729  INFO 4768 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
-2020-01-19 00:02:04.745  INFO 4768 --- [main] c.netflix.config.DynamicPropertyFactory  : DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@6a094db2
-2020-01-19 00:02:06.282  WARN 4768 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
-2020-01-19 00:02:06.282  INFO 4768 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
-2020-01-19 00:02:06.439  INFO 4768 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2020-01-19 00:02:06.954  INFO 4768 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 20 endpoint(s) beneath base path '/actuator'
-2020-01-19 00:02:07.060  INFO 4768 --- [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
-2020-01-19 00:02:07.106  INFO 4768 --- [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
-2020-01-19 00:02:07.660  INFO 4768 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
-2020-01-19 00:02:07.660  INFO 4768 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
-2020-01-19 00:02:07.816  INFO 4768 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
-2020-01-19 00:02:07.816  INFO 4768 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
-2020-01-19 00:02:08.016  INFO 4768 --- [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2020-01-19 00:02:08.428  INFO 4768 --- [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
-2020-01-19 00:02:08.428  INFO 4768 --- [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
-2020-01-19 00:02:08.428  INFO 4768 --- [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
-2020-01-19 00:02:08.428  INFO 4768 --- [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
-2020-01-19 00:02:08.428  INFO 4768 --- [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
-2020-01-19 00:02:08.428  INFO 4768 --- [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
-2020-01-19 00:02:08.428  INFO 4768 --- [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
-2020-01-19 00:02:08.694  INFO 4768 --- [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
-2020-01-19 00:02:08.694  INFO 4768 --- [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 5
-2020-01-19 00:02:08.709  INFO 4768 --- [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
-2020-01-19 00:02:08.709  INFO 4768 --- [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1579363328709 with initial instances count: 2
-2020-01-19 00:02:08.709  INFO 4768 --- [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application microservicecloud-config with eureka with status UP
-2020-01-19 00:02:08.709  INFO 4768 --- [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1579363328709, current=UP, previous=STARTING]
-2020-01-19 00:02:08.709  INFO 4768 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MICROSERVICECLOUD-CONFIG/microservicecloud-config:3344: registering service...
-2020-01-19 00:02:08.756  INFO 4768 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 3344 (http) with context path ''
-2020-01-19 00:02:08.756  INFO 4768 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MICROSERVICECLOUD-CONFIG/microservicecloud-config:3344 - registration status: 204
-2020-01-19 00:02:08.772  INFO 4768 --- [main] c.h.s.Config_3344_StartSpringCloudApp    : Started Config_3344_StartSpringCloudApp in 9.905 seconds (JVM running for 11.451)
-2020-01-19 00:02:10.789  INFO 4768 --- [RMI TCP Connection(4)-192.168.5.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2020-01-19 00:02:10.789  INFO 4768 --- [RMI TCP Connection(4)-192.168.5.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2020-01-19 00:02:10.804  INFO 4768 --- [RMI TCP Connection(4)-192.168.5.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 15 ms
-2020-01-19 00:02:20.680  INFO 4768 --- [http-nio-3344-exec-1] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: classpath:/configs/dev/microservicecloudprovider-dept-config-8001.yml
-2020-01-19 00:07:08.441  INFO 4768 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2020-01-19 00:07:34.701  INFO 16292 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'configurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$d5df90db] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2020-01-19 00:07:35.579  INFO 16292 --- [main] c.h.s.Config_3344_StartSpringCloudApp    : The following profiles are active: native
-2020-01-19 00:07:36.441  WARN 16292 --- [main] o.s.boot.actuate.endpoint.EndpointId     : Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
-2020-01-19 00:07:36.707  INFO 16292 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=eab34a48-07d5-392c-af96-fe2f61246ca1
-2020-01-19 00:07:36.800  INFO 16292 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$d5df90db] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2020-01-19 00:07:37.127  INFO 16292 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 3344 (http)
-2020-01-19 00:07:37.156  INFO 16292 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2020-01-19 00:07:37.156  INFO 16292 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.16]
-2020-01-19 00:07:37.163  INFO 16292 --- [main] o.a.catalina.core.AprLifecycleListener   : An older version [1.2.14] of the APR based Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [1.2.21]
-2020-01-19 00:07:37.163  INFO 16292 --- [main] o.a.catalina.core.AprLifecycleListener   : Loaded APR based Apache Tomcat Native library [1.2.14] using APR version [1.6.2].
-2020-01-19 00:07:37.163  INFO 16292 --- [main] o.a.catalina.core.AprLifecycleListener   : APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
-2020-01-19 00:07:37.164  INFO 16292 --- [main] o.a.catalina.core.AprLifecycleListener   : APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
-2020-01-19 00:07:38.223  INFO 16292 --- [main] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 1.0.2l  25 May 2017]
-2020-01-19 00:07:38.385  INFO 16292 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2020-01-19 00:07:38.385  INFO 16292 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2790 ms
-2020-01-19 00:07:38.588  WARN 16292 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
-2020-01-19 00:07:38.588  INFO 16292 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
-2020-01-19 00:07:38.604  INFO 16292 --- [main] c.netflix.config.DynamicPropertyFactory  : DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@17f2dd85
-2020-01-19 00:07:40.197  WARN 16292 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
-2020-01-19 00:07:40.197  INFO 16292 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
-2020-01-19 00:07:40.400  INFO 16292 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2020-01-19 00:07:40.931  INFO 16292 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 20 endpoint(s) beneath base path '/actuator'
-2020-01-19 00:07:41.025  INFO 16292 --- [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
-2020-01-19 00:07:41.079  INFO 16292 --- [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
-2020-01-19 00:07:41.716  INFO 16292 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
-2020-01-19 00:07:41.716  INFO 16292 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
-2020-01-19 00:07:41.888  INFO 16292 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
-2020-01-19 00:07:41.888  INFO 16292 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
-2020-01-19 00:07:42.148  INFO 16292 --- [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2020-01-19 00:07:42.610  INFO 16292 --- [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
-2020-01-19 00:07:42.610  INFO 16292 --- [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
-2020-01-19 00:07:42.610  INFO 16292 --- [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
-2020-01-19 00:07:42.610  INFO 16292 --- [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
-2020-01-19 00:07:42.610  INFO 16292 --- [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
-2020-01-19 00:07:42.610  INFO 16292 --- [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
-2020-01-19 00:07:42.610  INFO 16292 --- [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
-2020-01-19 00:07:42.923  INFO 16292 --- [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
-2020-01-19 00:07:42.938  INFO 16292 --- [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 5
-2020-01-19 00:07:42.938  INFO 16292 --- [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
-2020-01-19 00:07:42.954  INFO 16292 --- [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1579363662954 with initial instances count: 2
-2020-01-19 00:07:42.954  INFO 16292 --- [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application microservicecloud-config with eureka with status UP
-2020-01-19 00:07:42.954  INFO 16292 --- [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1579363662954, current=UP, previous=STARTING]
-2020-01-19 00:07:42.954  INFO 16292 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MICROSERVICECLOUD-CONFIG/microservicecloud-config:3344: registering service...
-2020-01-19 00:07:43.016  INFO 16292 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MICROSERVICECLOUD-CONFIG/microservicecloud-config:3344 - registration status: 204
-2020-01-19 00:07:43.032  INFO 16292 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 3344 (http) with context path ''
-2020-01-19 00:07:43.036  INFO 16292 --- [main] c.h.s.Config_3344_StartSpringCloudApp    : Started Config_3344_StartSpringCloudApp in 10.762 seconds (JVM running for 12.225)
-2020-01-19 00:07:45.212  INFO 16292 --- [RMI TCP Connection(6)-192.168.5.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2020-01-19 00:07:45.212  INFO 16292 --- [RMI TCP Connection(6)-192.168.5.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2020-01-19 00:07:45.220  INFO 16292 --- [RMI TCP Connection(6)-192.168.5.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 8 ms
-2020-01-19 00:08:13.783  INFO 16292 --- [http-nio-3344-exec-2] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: classpath:/configs/dev/microservicecloudprovider-dept-config-8001.yml
-2020-01-19 00:08:23.832  INFO 16292 --- [http-nio-3344-exec-1] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: classpath:/configs/dev/microservicecloudprovider-dept-config-8001.yml
-2020-01-19 00:12:42.623  INFO 16292 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-01-21 02:08:03.450  INFO 16260 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'configurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$7474b600] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-01-21 02:08:04.386  INFO 16260 --- [main] c.h.s.Config_3344_StartSpringCloudApp    : The following profiles are active: native
+2020-01-21 02:08:06.079  WARN 16260 --- [main] o.s.boot.actuate.endpoint.EndpointId     : Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2020-01-21 02:08:06.532  INFO 16260 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=eab34a48-07d5-392c-af96-fe2f61246ca1
+2020-01-21 02:08:06.698  INFO 16260 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$7474b600] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-01-21 02:08:07.233  INFO 16260 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 3344 (http)
+2020-01-21 02:08:07.283  INFO 16260 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-01-21 02:08:07.286  INFO 16260 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.16]
+2020-01-21 02:08:07.297  INFO 16260 --- [main] o.a.catalina.core.AprLifecycleListener   : An older version [1.2.14] of the APR based Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [1.2.21]
+2020-01-21 02:08:07.297  INFO 16260 --- [main] o.a.catalina.core.AprLifecycleListener   : Loaded APR based Apache Tomcat Native library [1.2.14] using APR version [1.6.2].
+2020-01-21 02:08:07.298  INFO 16260 --- [main] o.a.catalina.core.AprLifecycleListener   : APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2020-01-21 02:08:07.298  INFO 16260 --- [main] o.a.catalina.core.AprLifecycleListener   : APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2020-01-21 02:08:08.488  INFO 16260 --- [main] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 1.0.2l  25 May 2017]
+2020-01-21 02:08:08.731  INFO 16260 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-01-21 02:08:08.731  INFO 16260 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 4326 ms
+2020-01-21 02:08:08.980  WARN 16260 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2020-01-21 02:08:08.980  INFO 16260 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-01-21 02:08:08.998  INFO 16260 --- [main] c.netflix.config.DynamicPropertyFactory  : DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@660f0c
+2020-01-21 02:08:11.756  WARN 16260 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2020-01-21 02:08:11.756  INFO 16260 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-01-21 02:08:11.985  INFO 16260 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-01-21 02:08:12.599  INFO 16260 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 20 endpoint(s) beneath base path '/actuator'
+2020-01-21 02:08:12.705  INFO 16260 --- [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2020-01-21 02:08:12.751  INFO 16260 --- [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2020-01-21 02:08:13.365  INFO 16260 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2020-01-21 02:08:13.365  INFO 16260 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2020-01-21 02:08:13.511  INFO 16260 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2020-01-21 02:08:13.511  INFO 16260 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2020-01-21 02:08:13.733  INFO 16260 --- [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-01-21 02:08:14.157  INFO 16260 --- [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2020-01-21 02:08:14.157  INFO 16260 --- [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2020-01-21 02:08:14.157  INFO 16260 --- [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2020-01-21 02:08:14.157  INFO 16260 --- [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2020-01-21 02:08:14.158  INFO 16260 --- [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2020-01-21 02:08:14.158  INFO 16260 --- [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2020-01-21 02:08:14.158  INFO 16260 --- [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2020-01-21 02:08:14.644  INFO 16260 --- [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2020-01-21 02:08:14.647  INFO 16260 --- [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 5
+2020-01-21 02:08:14.649  INFO 16260 --- [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2020-01-21 02:08:14.653  INFO 16260 --- [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1579543694652 with initial instances count: 0
+2020-01-21 02:08:14.654  INFO 16260 --- [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application microservicecloud-config with eureka with status UP
+2020-01-21 02:08:14.655  INFO 16260 --- [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1579543694655, current=UP, previous=STARTING]
+2020-01-21 02:08:14.658  INFO 16260 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MICROSERVICECLOUD-CONFIG/microservicecloud-config:3344: registering service...
+2020-01-21 02:08:14.708  INFO 16260 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 3344 (http) with context path ''
+2020-01-21 02:08:14.711  INFO 16260 --- [main] c.h.s.Config_3344_StartSpringCloudApp    : Started Config_3344_StartSpringCloudApp in 13.865 seconds (JVM running for 16.943)
+2020-01-21 02:08:14.763  INFO 16260 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MICROSERVICECLOUD-CONFIG/microservicecloud-config:3344 - registration status: 204
+2020-01-21 02:08:17.079  INFO 16260 --- [RMI TCP Connection(8)-192.168.5.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-01-21 02:08:17.079  INFO 16260 --- [RMI TCP Connection(8)-192.168.5.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-01-21 02:08:17.087  INFO 16260 --- [RMI TCP Connection(8)-192.168.5.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 8 ms
+2020-01-21 02:08:19.649  INFO 16260 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2020-01-21 02:08:19.650  INFO 16260 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2020-01-21 02:08:19.650  INFO 16260 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2020-01-21 02:08:19.650  INFO 16260 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2020-01-21 02:08:19.650  INFO 16260 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2020-01-21 02:08:19.650  INFO 16260 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Application version is -1: false
+2020-01-21 02:08:19.650  INFO 16260 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2020-01-21 02:08:19.657  INFO 16260 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2020-01-21 02:08:24.660  INFO 16260 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2020-01-21 02:08:24.661  INFO 16260 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2020-01-21 02:08:24.661  INFO 16260 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2020-01-21 02:08:24.661  INFO 16260 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2020-01-21 02:08:24.661  INFO 16260 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2020-01-21 02:08:24.661  INFO 16260 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Application version is -1: false
+2020-01-21 02:08:24.661  INFO 16260 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2020-01-21 02:08:24.670  INFO 16260 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2020-01-21 02:08:29.672  INFO 16260 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2020-01-21 02:08:29.672  INFO 16260 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2020-01-21 02:08:29.672  INFO 16260 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2020-01-21 02:08:29.672  INFO 16260 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2020-01-21 02:08:29.673  INFO 16260 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2020-01-21 02:08:29.673  INFO 16260 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Application version is -1: false
+2020-01-21 02:08:29.673  INFO 16260 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2020-01-21 02:08:29.680  INFO 16260 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2020-01-21 02:08:34.684  INFO 16260 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2020-01-21 02:08:34.685  INFO 16260 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2020-01-21 02:08:34.685  INFO 16260 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2020-01-21 02:08:34.685  INFO 16260 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2020-01-21 02:08:34.685  INFO 16260 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2020-01-21 02:08:34.686  INFO 16260 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Application version is -1: false
+2020-01-21 02:08:34.686  INFO 16260 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2020-01-21 02:08:34.741  INFO 16260 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2020-01-21 02:08:47.665  INFO 16260 --- [http-nio-3344-exec-3] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: classpath:/configs/dev/microservicecloudprovider-dept-config-8001.yml
+2020-01-21 02:09:00.359  INFO 16260 --- [http-nio-3344-exec-5] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: classpath:/configs/dev/microservicecloudprovider-dept-config-8001.yml
