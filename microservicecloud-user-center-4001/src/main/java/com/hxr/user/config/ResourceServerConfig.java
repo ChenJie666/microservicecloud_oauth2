@@ -31,7 +31,7 @@ public class ResourceServerConfig extends ResourceServerConfigurerAdapter {
                 .exceptionHandling().authenticationEntryPoint(new AuthenticationEntryPoint() {
                     @Override
                     public void commence(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, AuthenticationException e) throws IOException, ServletException {
-                        httpServletResponse.sendError(HttpServletResponse.SC_UNAUTHORIZED); //TODO
+                        httpServletResponse.sendError(HttpServletResponse.SC_UNAUTHORIZED); //TODO 不理解???
                     }
                 })
                 .and().authorizeRequests()

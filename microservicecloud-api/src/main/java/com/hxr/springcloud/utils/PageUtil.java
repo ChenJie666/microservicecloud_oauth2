@@ -33,7 +33,7 @@ public class PageUtil {
         if (!CollectionUtils.isEmpty(params)) {
 
             if (params.containsKey(START)) {
-                Integer start = (Integer) params.get(START);
+                Integer start = (Integer) params.get(START);    //TODO 在Mapper配置文件中limit中指定jdbcType可能会失效，所以在这里直接转换为Integer类型
                 if (start < 0) {
                     log.error("start: {},重置为0", start);
                     start = 0;

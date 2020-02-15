@@ -20,9 +20,12 @@ public class AppUser implements Serializable {
     private String phone;
     private Integer sex;
     /**
-     * 状态
+     * 状态,此处是boolean类型，写入msyql数据库时会自动转换为tinyint(1)类型，1表示TRUE，0表示FALSE。
      */
     private boolean enabled;
+    /**
+     * com.hxr.springcloud.entities.user.constants
+     */
     private String type;
     private Date createTime;
     private Date updateTime;

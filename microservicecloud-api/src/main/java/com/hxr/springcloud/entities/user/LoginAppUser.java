@@ -23,7 +23,7 @@ public class LoginAppUser extends AppUser implements UserDetails {
     private Set<String> permissions;
 
 
-    @JsonIgnore
+    @JsonIgnore //在实体类向前台返回数据时用来忽略不想传递给前台的属性或接口
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
         Collection<GrantedAuthority> collection = new HashSet<>();

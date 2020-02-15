@@ -12,4 +12,11 @@ public interface AppUserService {
 
     Page<AppUser> findUsers(Map<String,Object> params);
 
+    AppUser findById(Long id);
+
+    void addAppUser(AppUser appUser);
+
+    void updateAppUser(AppUser appUser);
+
+    void updatePassword(Long id, String oldPassword, String newPassword);
 }
